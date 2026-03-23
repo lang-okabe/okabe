@@ -1,0 +1,38 @@
+// TODO: All of these packages
+import "io"
+import "string"
+import "aux"
+import "img"
+import "vid"
+import "net"
+import "raylib" as rl
+import "gui"
+
+typedef	 int i16 // <- same as C
+typedef  addition() add() // <- substitution for functions too
+typedef  rl.Initwindow InitWin()
+
+
+// can also do (int, bool)
+addition :: (x: int, y:int) -> (result: int, ok:bool) {
+    return x+y, true
+}
+
+/* Multi-line Comment
+   is writting like this */
+
+main :: () -> void {
+     io.println(add(2,3))
+     
+     io.print("%v", 20) // io.printf("%d", 20);  => %v is data-type agnostic printf essentially
+
+     rl.InitWindow(500,600); // ; are optional
+
+     io.print("%v", sub(3,3))
+}
+
+// Multi Pass Compiler, because it's not fucking 1997
+sub :: (x: int, y:int) -> (int, bool) {
+    return x-y, true
+}
+
