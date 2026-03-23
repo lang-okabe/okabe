@@ -1,4 +1,4 @@
-// TODO: All of these packages
+// TODO: imports for all kinds and all other packages
 import "io"
 import "string"
 import "aux"
@@ -7,11 +7,14 @@ import "vid"
 import "net"
 import "raylib" as rl
 import "gui"
+import "foo.ok"
+
+// Will be a bitch to implement but go one
+import "bar.c"
 
 typedef	 int i16 // <- same as C
 typedef  addition() add() // <- substitution for functions too
 typedef  rl.Initwindow InitWin()
-
 
 // can also do (int, bool)
 addition :: (x: int, y:int) -> (result: int, ok:bool) {
@@ -19,14 +22,15 @@ addition :: (x: int, y:int) -> (result: int, ok:bool) {
 }
 
 /* Multi-line Comment
-   is writting like this */
+   is writting like this
+*/
 
 main :: () -> void {
      io.println(add(2,3))
      
      io.print("%v", 20) // io.printf("%d", 20);  => %v is data-type agnostic printf essentially
 
-     rl.InitWindow(500,600); // ; are optional
+     Initwin(500,600); // ; are optional
 
      io.print("%v", sub(3,3))
 }
